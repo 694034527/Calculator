@@ -16,13 +16,16 @@
 	function end(){
 		clearTimeout(t);
 	}
+	start.onclick = function(){
+begin();
+}
 </script>
 </head>
 
 <body>
 <form name="form1" action="#">
 	<input type="text" name="stuName" style="border-color:#666666; border-style:solid; border-width:1px;" /><P>
-    <input type="button" value="start" onclick="begin()"><P>
+    <input id='start' type="button" value="start" onclick="begin()"><P>
     <input type="button" value="end" onclick="end()"><P>    
 </form>
 </body>
