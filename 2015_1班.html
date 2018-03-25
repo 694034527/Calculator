@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script language="javascript" type="text/javascript">
+	
+	var arr = new Array("1" , "2" , "3" , "4" , "5" , "6" , "7" , "8" , "9" , 10", "11" , "12" , "13" , "14" , "15", "16" , "17" , "18");
+	var t;
+	function begin(){
+		var randomIndex = parseInt(Math.random()*arr.length);
+		form1.stuName.value = arr[randomIndex];
+		t = setTimeout("begin()",100);			
+	}
+	
+	function end(){
+		clearTimeout(t);
+	}
+</script>
+</head>
+
+<body>
+<form name="form1" action="#">
+	<input type="text" name="stuName" style="border-color:#666666; border-style:solid; border-width:1px;" /><P>
+    <input type="button" value="start" onclick="begin()"><P>
+    <input type="button" value="end" onclick="end()"><P>    
+</form>
+</body>
+</html>
